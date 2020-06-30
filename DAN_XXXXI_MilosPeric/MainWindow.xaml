@@ -7,6 +7,18 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
-        
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="23*"/>
+            <ColumnDefinition Width="43*"/>
+        </Grid.ColumnDefinitions>
+        <TextBox x:Name="tbTextBoxPrinter" HorizontalAlignment="Left" Height="268" Margin="45,65,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="550" Grid.ColumnSpan="2" TextChanged="tbTextBoxPrinter_TextChanged" Background="#FFF3EFEF"/>
+        <Button Content="Print" x:Name="btnPrint" HorizontalAlignment="Left" Height="32" Margin="357,255,0,0" VerticalAlignment="Top" Width="116" Click="btnPrint_Click" Grid.Column="1"/>
+        <ProgressBar x:Name="progressBar1" HorizontalAlignment="Left" Height="25" Margin="45,366,0,0" VerticalAlignment="Top" Width="704" Grid.ColumnSpan="2" Foreground="#FF066AB0"/>
+        <Button Content="Cancel" x:Name="btnCancel" HorizontalAlignment="Left" Height="31" Margin="357,302,0,0" VerticalAlignment="Top" Width="116" Click="btnCancel_Click" Grid.Column="1" IsEnabled="False"/>
+        <TextBox x:Name="tbNumberOfPages" HorizontalAlignment="Left" Height="18" Margin="357,65,0,0" TextWrapping="Wrap" Text="1" VerticalAlignment="Top" Width="35" Grid.Column="1" TextChanged="tbNumberOfPages_TextChanged" />
+        <TextBlock HorizontalAlignment="Left" Height="31" Margin="10,10,0,0" TextWrapping="Wrap" Text="Printer Application" VerticalAlignment="Top" Width="191" FontSize="20" Grid.Column="1" FontWeight="Bold"/>
+        <TextBlock Grid.Column="1" HorizontalAlignment="Left" Height="19" Margin="357,41,0,0" TextWrapping="Wrap" Text="Number of Pages" VerticalAlignment="Top" Width="109"/>
+        <TextBlock Grid.Column="1" HorizontalAlignment="Left" Height="17" Margin="357,134,0,0" TextWrapping="Wrap" Text="Status:" VerticalAlignment="Top" Width="109"/>
+        <TextBlock x:Name="tbStatus" Grid.Column="1" HorizontalAlignment="Left" Height="21" Margin="357,159,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="137"/>
     </Grid>
 </Window>
